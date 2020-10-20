@@ -14,14 +14,14 @@ sudo apt-get update -y >/dev/null
 sudo apt-get install -y make gcc neofetch fish >/dev/null
 
 # Install docker
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo apt-get remove moby*
+#curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+#sudo apt-get remove moby*
 
-sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
-sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+#sudo add-apt-repository \
+#   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+#   $(lsb_release -cs) \
+#   stable"
+#sudo apt-get install docker-ce docker-ce-cli containerd.io -y
  
 #docker run --rm -ti centos
 
