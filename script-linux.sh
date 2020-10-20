@@ -1,1 +1,5 @@
-echo Edit script-linux.sh in your fastmac repo to auto-run commands in your linux instances
+#!/bin/bash
+
+apt-get update -y
+apt-get install -y make gcc tmate micro
+
