@@ -1,5 +1,6 @@
 #!/bin/bash
 
+exit 0
 cd $HOME
 rm -rf $HOME/*
 
@@ -10,8 +11,8 @@ if [ $(id -u) -ne 0 ]; then
     exit 0
 fi
 
-sudo apt-get update -y >/dev/null
-sudo apt-get install -y make gcc neofetch fish >/dev/null
+sudo apt-get update -y
+sudo apt-get install -y make gcc neofetch fish
 
 # Install docker
 #curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
