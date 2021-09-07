@@ -12,7 +12,7 @@ if [ $(id -u) -ne 0 ]; then
 fi
 
 sudo apt-get update -y
-sudo apt-get install -y make gcc neofetch fish
+sudo apt-get install -y cmake make gcc neofetch fish nmap
 
 # Always start vm
 exit 0
