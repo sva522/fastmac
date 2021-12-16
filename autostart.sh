@@ -1,18 +1,15 @@
 #!/bin/bash
 
-exit 0
-cd $HOME
-rm -rf $HOME/*
+# Update distro
+sudo apt-get update
+sudo apt-get -y upgrade
+# Install base packages
+sudo apt-get install -y cmake make gcc neofetch fish nmap micro
 
+# Add settings
 echo neofetch >> ~/.bashrc
-
-if [ $(id -u) -ne 0 ]; then
-    sudo $0
-    exit 0
-fi
-
-sudo apt-get update -y
-sudo apt-get install -y cmake make gcc neofetch fish nmap
+sudo sed -i 's+/home/runner:/bin/bash+/home/runner:/usr/bin/fish+g' /etc/passwd
+cat nanorc > /etc/nanorc
 
 # Always start vm
 exit 0
