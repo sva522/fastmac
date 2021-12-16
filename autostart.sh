@@ -19,7 +19,7 @@ sudo apt install -y cmake make gcc neofetch fish nmap micro
 # Add settings
 echo neofetch >> ~/.bashrc
 sudo sed -i 's+/home/runner:/bin/bash+/home/runner:/usr/bin/fish+g' /etc/passwd
-sudo cat nanorc > /etc/nanorc
+sudo cp nanorc /etc/nanorc
 
 # Always start vm
 exit 0
