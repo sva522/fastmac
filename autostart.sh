@@ -4,13 +4,14 @@
 sudo apt update
 sudo apt -y upgrade
 
-# Remove blocked packages
-sudo apt remove mysql*
-
-sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades
-
-# Update to last version (no lts)
-do-release-upgrade -f DistUpgradeViewNonInteractive
+## Update to last version (no lts)
+### Too long => disabled
+## Enable normal release
+# sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades
+## Remove blocked packages
+# sudo apt remove mysql*
+# Do update...
+# do-release-upgrade -f DistUpgradeViewNonInteractive
 
 # Install base packages
 sudo apt install -y cmake make gcc neofetch fish nmap micro
