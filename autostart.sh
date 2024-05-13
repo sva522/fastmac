@@ -1,5 +1,5 @@
 #!/bin/bash
-
+exit 0
 cd $(dirname $0)
 
 # Update distro
